@@ -1,16 +1,19 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useMemo } from 'react';
 
 function DynamicTyping() {
-  const words = [
-    "platforms",
-    "brands", 
-    "experiences",
-    "stories",
-    "interfaces",
-    "tools",
-    "campaigns", 
-    "products"
-  ];
+  const words = useMemo(
+    () => [
+      "platforms",
+      "brands",
+      "experiences",
+      "stories",
+      "interfaces",
+      "tools",
+      "campaigns",
+      "products",
+    ],
+    []
+  );
   
   const [currentWordIndex, setCurrentWordIndex] = useState(0);
   const [displayText, setDisplayText] = useState('');
